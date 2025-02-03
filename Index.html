@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín para Kei</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe4e1;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+            animation: vibrar 0.3s infinite;
+        }
+        .no {
+            background-color: #FF5733;
+            color: white;
+        }
+        @keyframes vibrar {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            50% { transform: translateX(3px); }
+            75% { transform: translateX(-3px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¿Me das el honor de ser tu San Valentín, mi pequeña Kei? 💖</h1>
+    <img src="https://i.imgur.com/E5tH7rM.png" alt="Ositos enamorados" width="300">
+
+    <div class="container">
+        <button class="yes" onclick="alert('¡Sabía que dirías que sí! 💕')">Sí</button>
+        <button class="no" id="noBtn" onclick="alert('¡No puedes decir que no! 😜')">No</button>
+    </div>
+
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <script>
+        document.getElementById("noBtn").addEventListener("mouseover", function() {
+            var x = Math.random() * window.innerWidth * 0.8;
+            var y = Math.random() * window.innerHeight * 0.8;
+            this.style.position = "absolute";
+            this.style.left = x + "px";
+            this.style.top = y + "px";
+        });
+    </script>
+
+</body>
+</html>
